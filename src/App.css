@@ -1,1 +1,26 @@
+.App {
+  margin: 0 auto;
+  max-width: 1080px;
+  padding: 0 25px;
+}
 
+.WeatherCard {
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.Subheader {
+  font-size: 16;
+  
+}
+
+.CurrentTemperature {
+  font-size: 96;
+  font-weight: bold;
+  font-family: serif;
+  margin: 0;
+}
+
+.CurrentTemperatureWrapper {
+
+}
