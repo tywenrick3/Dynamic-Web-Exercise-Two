@@ -23,13 +23,13 @@ function WeatherCard({
                 Current Temp: <strong>{currentTemp}</strong>
             </p>
             <p className="weatherInfo">
-                High Temp: <strong>{highTemp}</strong>
+                High: <strong>{highTemp}</strong>
             </p>
             <p className="weatherInfo">
                 Humidity: <strong>{humidity}</strong>
             </p>
             <p className="weatherInfo">
-                Low Temp: <strong>{lowTemp}</strong>
+                Low: <strong>{lowTemp}</strong>
             </p>
             <p className="weatherInfo">
                 Weather Type: <strong>{weatherType}</strong>
