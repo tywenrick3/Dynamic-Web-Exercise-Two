@@ -17,7 +17,7 @@ function Home(){
 
     return (
         <main className="App">
-            <header>Weather App</header>
+            <header className="appTitle">Live Weather</header>
             <WeatherCard 
                 cloudiness={cloudiness}
                 currentTemp={currentTemp}
