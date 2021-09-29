@@ -17,25 +17,25 @@ function WeatherCard({
             </div>
             <div className="weatherInfoWrapper">
             <p className="weatherInfo">
-                cloudiness: <strong>{cloudiness}</strong>
+                Cloudiness: <strong>{cloudiness}</strong>
             </p>
             <p className="weatherInfo">
-                currentTemp: <strong>{currentTemp}</strong>
+                Current Temp: <strong>{currentTemp}</strong>
             </p>
             <p className="weatherInfo">
-                highTemp: <strong>{highTemp}</strong>
+                High Temp: <strong>{highTemp}</strong>
             </p>
             <p className="weatherInfo">
-                humidity: <strong>{humidity}</strong>
+                Humidity: <strong>{humidity}</strong>
             </p>
             <p className="weatherInfo">
-                lowTemp: <strong>{lowTemp}</strong>
+                Low Temp: <strong>{lowTemp}</strong>
             </p>
             <p className="weatherInfo">
-                WeatherType: <strong>{weatherType}</strong>
+                Weather Type: <strong>{weatherType}</strong>
             </p>
             <p className="weatherInfo">
-                windSpeed: <strong>{windSpeed}</strong>
+                Wind Speed: <strong>{windSpeed}</strong>
             </p>
             </div>
         </section>
