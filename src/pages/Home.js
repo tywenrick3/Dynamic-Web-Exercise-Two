@@ -13,7 +13,8 @@ function useQuery() {
 
 function Home(){
     const [city, setCity] = useState();
-    const [weatherData, setWeatherData] = useState({});
+    const [weatherData, setWeatherData] = useState();
+    
     let query = useQuery();
 
     useEffect(() => {
