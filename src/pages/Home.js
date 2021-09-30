@@ -14,7 +14,7 @@ function useQuery() {
 function Home(){
     const [city, setCity] = useState();
     const [weatherData, setWeatherData] = useState();
-    
+
     let query = useQuery();
 
     useEffect(() => {
@@ -50,6 +50,7 @@ function Home(){
         windSpeed,
     } = useMemo(() => {
         if (!weatherData) return {};
+        //TODO: Make temp F or C instead of Kelvin
         return {
             cloudiness: weatherData.clouds.all,
             currentTemp: weatherData.main.temp,
@@ -69,6 +70,12 @@ function Home(){
                 </p>
                 <p>
                     <a href='/?=tokyo'>Tokyo</a>
+                </p>
+                <p>
+                    <a href='/?=NewYork'>New York</a>
+                </p>
+                <p>
+                    <a href='/?=SanFrancisco'>San Francsico</a>
                 </p>
             </header>
             <h1>{city}</h1>
