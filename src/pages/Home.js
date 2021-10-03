@@ -26,7 +26,7 @@ function Home(){
         if (city) {
         axios
             .get(
-                `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+                `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=imperial`
             )
             .then(function (response) {
                 //handle success
