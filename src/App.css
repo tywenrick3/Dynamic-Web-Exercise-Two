@@ -4,7 +4,17 @@
   padding: 0 25px;
 }
 
+a:link {
+  color: rgb(126, 93, 216);
+}
+
+a:visited {
+  color: purple;
+}
+
 .links {
+  display: flex;
+  justify-content: space-between;
   text-align: center;
   font-weight: bold;
   font-size: 16px;
