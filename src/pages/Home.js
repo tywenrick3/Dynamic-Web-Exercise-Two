@@ -66,10 +66,10 @@ function Home(){
         <main className="App">
             <header>
                 <nav className="Navigation">
-                    <a href='/?city=Paris' className={city == 'Paris' && 'Active'}>Paris</a>
-                    <a href='/?city=Tokyo' className={city == 'Tokyo' && 'Active'}>Tokyo</a>
-                    <a href='/?city=Seoul' className={city == 'Seoul' && 'Active'}>Seoul</a>
-                    <a href='/?city=Israel' className={city == 'Israel' && 'Active'}>Israel</a>
+                    <a href='/?city=Paris' className={city === 'Paris' && 'Active'}>Paris</a>
+                    <a href='/?city=Tokyo' className={city === 'Tokyo' && 'Active'}>Tokyo</a>
+                    <a href='/?city=Seoul' className={city === 'Seoul' && 'Active'}>Seoul</a>
+                    <a href='/?city=Israel' className={city === 'Israel' && 'Active'}>Israel</a>
                 </nav>
             </header>
             <h1 className="CityTitle">{city}</h1>
@@ -87,3 +87,4 @@ function Home(){
 }
 
 export default Home;
+
