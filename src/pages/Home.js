@@ -24,9 +24,10 @@ function Home(){
 
     useEffect(() => {
         if (city) {
+        console.log(city)
         axios
             .get(
-                `api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=imperial`
+                `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=imperial`
             )
             .then(function (response) {
                 //handle success
@@ -50,13 +51,12 @@ function Home(){
         windSpeed,
     } = useMemo(() => {
         if (!weatherData) return {};
-        //TODO: Make temp F or C instead of Kelvin
         return {
             cloudiness: weatherData.clouds.all,
-            currentTemp: weatherData.main.temp,
-            highTemp: weatherData.main.temp_max,
+            currentTemp: Math.round(weatherData.main.temp),
+            highTemp: Math.round(weatherData.main.temp_max),
             humidity: weatherData.main.humidity,
-            lowTemp: weatherData.main.temp_min,
+            lowTemp: Math.round(weatherData.main.temp_min),
             weatherType: weatherData.weather[0].main,
             windSpeed: weatherData.wind.speed
         }; 
@@ -64,21 +64,15 @@ function Home(){
 
     return (
         <main className="App">
-            <header className="links">
-                <p>
-                    <a href='/?=paris'>Paris</a>
-                </p>
-                <p>
-                    <a href='/?=tokyo'>Tokyo</a>
-                </p>
-                <p>
-                    <a href='/?=NewYork'>New York</a>
-                </p>
-                <p>
-                    <a href='/?=SanFrancisco'>San Francsico</a>
-                </p>
+            <header>
+                <nav className="Navigation">
+                    <a href='/?city=Paris' className={city == 'Paris' && 'Active'}>Paris</a>
+                    <a href='/?city=Tokyo' className={city == 'Tokyo' && 'Active'}>Tokyo</a>
+                    <a href='/?city=Seoul' className={city == 'Seoul' && 'Active'}>Seoul</a>
+                    <a href='/?city=Israel' className={city == 'Israel' && 'Active'}>Israel</a>
+                </nav>
             </header>
-            <h1>{city}</h1>
+            <h1 className="CityTitle">{city}</h1>
             <WeatherCard 
                 cloudiness={cloudiness}
                 currentTemp={currentTemp}

@@ -10,11 +10,11 @@ import {
 function App() {
   return (
     <Router>
-      <switch>
+      <Switch>
         <Route path="/">
           <Home />
         </Route>
-      </switch>
+      </Switch>
     </Router>
   );
 }
