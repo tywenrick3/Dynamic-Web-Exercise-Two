@@ -11,6 +11,16 @@ function useQuery() {
     return new URLSearchParams(useLocation().search);
 }
 
+const daysOfWeek = [
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+]
+
 function Home(){
     const [city, setCity] = useState();
     const [weatherData, setWeatherData] = useState();
@@ -62,17 +72,21 @@ function Home(){
         }; 
     }, [weatherData]);
 
+    const currentDate = new Date();
+    const todayIndex = currentDate.getDay();
+
     return (
         <main className="App">
             <header>
                 <nav className="Navigation">
                     <a href='/?city=Paris' className={city === 'Paris' && 'Active'}>Paris</a>
                     <a href='/?city=Tokyo' className={city === 'Tokyo' && 'Active'}>Tokyo</a>
-                    <a href='/?city=Seoul' className={city === 'Seoul' && 'Active'}>Seoul</a>
-                    <a href='/?city=Israel' className={city === 'Israel' && 'Active'}>Israel</a>
+                    <a href='/?city=Tel Aviv' className={city === 'Tel Aviv' && 'Active'}>Tel Aviv</a>
+                    <a href='/?city=New York' className={city === 'New York' && 'Active'}>New York</a>
                 </nav>
             </header>
             <h1 className="CityTitle">{city}</h1>
+            <h2>{daysOfWeek[todayIndex]}</h2>
             <WeatherCard 
                 cloudiness={cloudiness}
                 currentTemp={currentTemp}

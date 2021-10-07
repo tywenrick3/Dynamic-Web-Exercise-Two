@@ -45,12 +45,24 @@
 .WeatherCard {
   border: 3px solid black;
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+
+}
+
+@media (min-width: 800px){
+  .WeatherCard{
+    flex-direction: row;
+  }
+  .CityTitle {
+    font-size: 100px;
+  }
 }
 
 .weatherInfo {
   font-size: 16px;
   font-family: monospace;
-  padding: 10px;
+  padding: 5px;
 }
 
 .WeatherImageWrapper{
@@ -59,8 +71,9 @@
 
 .weatherInfoWrapper {
   display: flex;
-  flex-wrap: wrap;
+  row-gap: 5px;
   justify-content: center;
+  flex-direction: column;
 }
 
 
