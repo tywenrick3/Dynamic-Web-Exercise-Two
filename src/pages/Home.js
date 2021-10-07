@@ -103,7 +103,7 @@ function Home(){
                 </nav>
             </header>
             <h1 className="CityTitle">{city}</h1>
-            <h2>{daysOfWeek[todayIndex] + ' ' + monthsOfYear[monthIndex] + ' ' + UTCDATE}</h2>
+            <h2 className="Date">{daysOfWeek[todayIndex] + ' ' + monthsOfYear[monthIndex] + ' ' + UTCDATE}</h2>
             <WeatherCard 
                 cloudiness={cloudiness}
                 currentTemp={currentTemp}

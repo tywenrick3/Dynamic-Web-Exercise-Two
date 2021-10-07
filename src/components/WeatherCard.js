@@ -15,8 +15,8 @@ function WeatherCard({
             className="WeatherCard" 
             style={{
             backgroundColor: `rgba(150, 150, 150, ${cloudiness/100})`,
-        }}>
-            <div className="CurrentTemperatureWrapper">
+            }}>
+            <div className="MainInfo">
                 <div className='WeatherImageWrapper'>
                     <WeatherImage weatherType={weatherType} />
                 </div>
@@ -30,7 +30,7 @@ function WeatherCard({
                 </div>
 
             </div>
-            <div className="weatherInfoWrapper">
+            <div className="Details">
                 <p className="weatherInfo">
                     Cloudiness: <strong>{cloudiness}%</strong>
                 </p>
