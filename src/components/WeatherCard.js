@@ -21,14 +21,13 @@ function WeatherCard({
                     <WeatherImage weatherType={weatherType} />
                 </div>
                 <p className="CurrentTemp">{currentTemp}°</p>
-                <div className='underImage'>
+                <div>
                     <p className="weatherType"><strong>{weatherType}</strong></p>
                     <div className='highandlow'>
                         <p>H: <strong>{highTemp}°</strong></p>
                         <p>L: <strong>{lowTemp}°</strong></p>
                     </div>
                 </div>
-
             </div>
             <div className="Details">
                 <p className="weatherInfo">

@@ -29,7 +29,7 @@
   font-family: basic-sans, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 24;
+  font-size: 22px;
 }
 
 .Navigation {
@@ -55,11 +55,17 @@
 }
 
 .WeatherCard {
-  border: 3px solid black;
+  border: 3px solid rgb(231, 49, 255);
   border-radius: 8px;
   display: flex;
   align-items: center;
+}
 
+.weatherType {
+  font-family: basic-sans, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  margin-bottom: 0%;
 }
 
 @media (min-width: 800px){
@@ -72,7 +78,7 @@
 }
 
 .weatherInfo {
-  font-size: 16px;
+  font-size: 18px;
   font-family: basic-sans, sans-serif;
 }
 
