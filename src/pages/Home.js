@@ -21,6 +21,21 @@ const daysOfWeek = [
     'Saturday'
 ]
 
+const monthsOfYear = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+]
+
 function Home(){
     const [city, setCity] = useState();
     const [weatherData, setWeatherData] = useState();
@@ -74,6 +89,8 @@ function Home(){
 
     const currentDate = new Date();
     const todayIndex = currentDate.getDay();
+    const monthIndex = currentDate.getMonth();
+    const UTCDATE = currentDate.getUTCDate();
 
     return (
         <main className="App">
@@ -86,7 +103,7 @@ function Home(){
                 </nav>
             </header>
             <h1 className="CityTitle">{city}</h1>
-            <h2>{daysOfWeek[todayIndex]}</h2>
+            <h2>{daysOfWeek[todayIndex] + ' ' + monthsOfYear[monthIndex] + ' ' + UTCDATE}</h2>
             <WeatherCard 
                 cloudiness={cloudiness}
                 currentTemp={currentTemp}

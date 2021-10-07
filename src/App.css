@@ -72,7 +72,6 @@
 .weatherInfoWrapper {
   display: flex;
   row-gap: 5px;
-  justify-content: center;
   flex-direction: column;
 }
 
