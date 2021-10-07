@@ -72,3 +72,11 @@
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.highandlow{
+  display: flex;
+  font-weight: normal;
+  gap: 10px;
+  justify-content: center;
+  align-items: left;
+}
+
